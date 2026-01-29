@@ -8,12 +8,12 @@ LAB: Testing Objects
 
 public class Dog {
 
-    // Fields (now private)
+    // Private instance variables (fields)
     private String name;
     private int age;
     private String breed;
 
-    // Default constructor
+    // No-argument (default) constructor
     public Dog() {
         name = "Unknown";
         age = 0;
@@ -28,17 +28,34 @@ public class Dog {
     }
 
     // Getters and setters
-    public String getName() { return name; }
-    public void setName(String name) { this.name = name; }
-
-    public int getAge() { return age; }
-    public void setAge(int age) {
-        if (age >= 0) this.age = age;
+    public String getName() {
+        return name;
     }
 
-    public String getBreed() { return breed; }
-    public void setBreed(String breed) { this.breed = breed; }
+    public void setName(String name) {
+        this.name = name;
+    }
 
+    public int getAge() {
+        return age;
+    }
+
+    public void setAge(int age) {
+        // Simple validation rule
+        if (age >= 0) {
+            this.age = age;
+        }
+    }
+
+    public String getBreed() {
+        return breed;
+    }
+
+    public void setBreed(String breed) {
+        this.breed = breed;
+    }
+
+    // Override toString() for readable output
     @Override
     public String toString() {
         return "Dog{name='" + name + "', age=" + age + ", breed='" + breed + "'}";

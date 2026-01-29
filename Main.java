@@ -6,41 +6,36 @@ LAB: Testing Objects
 
 *******************************************************************************/
 
-public class Main {public static void main(String[] args) {
+public class Main {
+    public static void main(String[] args) {
 
-        // A1: Create a Dog with no constructors defined.
+        // ===== PART A: Object with no toString =====
         Dog dog1 = new Dog();
-
-        // A2: Print the object directly.
         System.out.println("Printing dog1 directly:");
         System.out.println(dog1);
 
-        // ----------------------------------------
-        // Defaults before assignment
+        // ===== PART B: Default field values =====
         Dog d1 = new Dog();
         System.out.println("\nDefaults for d1 fields (before any assignment):");
         System.out.println("name = " + d1.getName());
         System.out.println("age = " + d1.getAge());
         System.out.println("breed = " + d1.getBreed());
 
-        // ----------------------------------------
-        // Constructors
-        Dog d2 = new Dog(); // default constructor
+        // ===== PART C: Constructors =====
+        Dog d2 = new Dog();
         System.out.println("\nd2 after default constructor:");
-        System.out.println("name = " + d2.getName() + ", age = " + d2.getAge() + ", breed = " + d2.getBreed());
+        System.out.println(d2);
 
-        Dog d3 = new Dog("Rex", 4, "Collie"); // parameterized constructor
+        Dog d3 = new Dog("Rex", 4, "Collie");
         System.out.println("\nd3 after parameterized constructor:");
-        System.out.println("name = " + d3.getName() + ", age = " + d3.getAge() + ", breed = " + d3.getBreed());
+        System.out.println(d3);
 
-        // ----------------------------------------
-        // toString()
+        // ===== PART D: toString() =====
         System.out.println("\nPrinting objects after overriding toString():");
         System.out.println("d2 = " + d2);
         System.out.println("d3 = " + d3);
 
-        // ----------------------------------------
-        // Mutating via setters
+        // ===== PART E: Encapsulation =====
         System.out.println("\nMutating via setters after making fields private:");
         d3.setAge(6);
         d3.setName("Maxwell");
@@ -48,5 +43,13 @@ public class Main {public static void main(String[] args) {
 
         System.out.println("d3 age via getter = " + d3.getAge());
         System.out.println("d3 now = " + d3);
+
+        // ===== Student-defined class test =====
+        Book book1 = new Book();
+        Book book2 = new Book("1984", "George Orwell", 328, 9.99, true);
+
+        System.out.println("\nBook objects:");
+        System.out.println(book1);
+        System.out.println(book2);
     }
 }
