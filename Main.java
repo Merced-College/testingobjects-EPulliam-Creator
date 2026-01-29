@@ -51,5 +51,29 @@ public class Main {
         System.out.println("\nBook objects:");
         System.out.println(book1);
         System.out.println(book2);
+        // =======================================================
+        // ===== STUDENT-DEFINED CLASS: Pizza ====================
+        // =======================================================
+
+        // Default constructor
+        Pizza p1 = new Pizza();
+        System.out.println("\nPizza p1 (default constructor):");
+        System.out.println(p1);
+
+        // Parameterized constructor
+        Pizza p2 = new Pizza("Large", "Thin", 10, 14.99, true);
+        System.out.println("\nPizza p2 (parameterized constructor):");
+        System.out.println(p2);
+
+        // Mutate Pizza using setters
+        System.out.println("\nMutating Pizza via setters:");
+        p2.setPrice(15.99);
+        p2.setSlices(12);
+        p2.setExtraCheese(false);
+
+        // Access Pizza via getters
+        System.out.println("p2 slices via getter = " + p2.getSlices());
+        System.out.println("p2 now = " + p2);
+
     }
 }
