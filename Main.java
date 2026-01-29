@@ -1,5 +1,12 @@
-public class Main {
-    public static void main(String[] args) {
+/******************************************************************************
+
+Eura Pulliam
+1.29.26
+LAB: Testing Objects
+
+*******************************************************************************/
+
+public class Main {public static void main(String[] args) {
 
         // A1: Create a Dog with no constructors defined.
         Dog dog1 = new Dog();
